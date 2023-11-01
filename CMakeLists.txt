@@ -71,3 +71,15 @@ set_property(
     TARGET ${SEVENZIP_WRAPPER_STATIC_LIBRARY_TARGET}
     PROPERTY CXX_STANDARD 11
 )
+
+# build example cli demo
+message("Build 7z example cli")
+add_executable(
+    7zdemocli
+    example.cpp
+)
+
+target_link_libraries(
+    7zdemocli
+    7zwrapper
+)
